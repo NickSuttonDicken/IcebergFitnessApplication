@@ -205,7 +205,7 @@
                         android:layout_below="@id/heightTitle"
                         android:layout_margin="5dp"
                         android:layout_toEndOf="@id/nameTitle"
-                        android:text="94kg" />
+                        android:text="80kg" />
 
 
                 </RelativeLayout>
