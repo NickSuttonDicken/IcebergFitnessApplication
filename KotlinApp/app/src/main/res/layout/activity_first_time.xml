@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstTimeActivity"
+    android:layout_margin="12dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/white_iceberg"
+        android:layout_centerHorizontal="true"
+        app:civ_circle_color="@color/primaryBlue"
+        app:civ_border_color="@color/primaryBlue"/>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your details"
+        android:layout_below="@id/logo"
+        android:textStyle="bold"
+        android:textColor="@color/primaryBlue"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/subtitle">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameField"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:hint="Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageField"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@id/nameField"
+            android:layout_below="@id/nameField"
+            app:hintTextColor="@color/primaryBlue"
+            android:hint="Age"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/heightField"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@id/ageField"
+            android:layout_below="@id/ageField"
+            app:hintTextColor="@color/primaryBlue"
+            android:hint="Height"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/heightUnits"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="dropdown_menu"
+            app:errorEnabled="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignEnd="@id/nameField"
+            android:layout_below="@id/ageField"
+            app:hintTextColor="@color/primaryBlue"
+
+            android:hint="Units"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weightField"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@id/heightField"
+            android:layout_below="@id/heightField"
+            app:hintTextColor="@color/primaryBlue"
+
+            android:hint="Weight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weightUnits"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            app:endIconMode="dropdown_menu"
+            app:errorEnabled="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignEnd="@id/heightUnits"
+            android:layout_below="@id/heightField"
+            app:hintTextColor="@color/primaryBlue"
+            android:hint="Units"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Submit"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/weightField"
+            android:onClick="submitClick"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

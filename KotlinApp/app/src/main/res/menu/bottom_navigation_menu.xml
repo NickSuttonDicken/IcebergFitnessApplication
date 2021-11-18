@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/page_1"/>
+    <item
+        android:id="@+id/history"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_access_time_filled_24"
+        android:title="@string/page_2"/>
+
+    <item
+        android:id="@+id/workouts"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="@string/page_3"/>
+
+    <item
+        android:id="@+id/plans"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="@string/page_4"/>
+
+    <item
+        android:id="@+id/exercises"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="@string/page_5"/>
+</menu>
